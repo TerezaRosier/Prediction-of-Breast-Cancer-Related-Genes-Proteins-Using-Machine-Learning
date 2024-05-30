@@ -4,13 +4,13 @@ import pickle
 import pandas as pd
 
 def load_model():
-    with open('model_randomforest_upsampling_class_weight_balanced.pkl', 'rb') as file:
+    with open('Deployment/model_randomforest_upsampling_class_weight_balanced.pkl', 'rb') as file:
         model = pickle.load(file)
-    with open('scaler_randomforest_upsampling_class_weight_balanced.pkl', 'rb') as file:
+    with open('Deployment/scaler_randomforest_upsampling_class_weight_balanced.pkl', 'rb') as file:
         scaler = pickle.load(file)
-    with open('label_encoder.pkl', 'rb') as file:
+    with open('Deployment/label_encoder.pkl', 'rb') as file:
         label_encoder = pickle.load(file)
-    with open('preprocessor.pkl', 'rb') as file:
+    with open('Deployment/preprocessor.pkl', 'rb') as file:
         preprocessor = pickle.load(file)
     return model, scaler, label_encoder, preprocessor
 
